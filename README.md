@@ -14,7 +14,7 @@ HybridSVP es un formato propio: no copia HYROX ni es un triatlón. Es un proyect
 | Archivo | Qué es |
 |---|---|
 | [`docs/INFORMACION.md`](docs/INFORMACION.md) | **Información**: recopilación completa del proyecto (planteamiento, análisis inicial, decisiones con estados DECIDIDO / PENDIENTE / POR VALIDAR, tensiones y próximos pasos). |
-| `index.html`, `styles.css` | Web informativa estática del evento. No incluye formularios, pagos ni datos personales. |
+| `index.html` | Web informativa estática del evento (estilos e iconos incluidos en el propio archivo). No incluye formularios, pagos ni datos personales. |
 | `.nojekyll` | Indica a GitHub Pages que sirva los archivos tal cual. |
 
 ## Publicar la web en GitHub Pages

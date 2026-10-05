@@ -386,7 +386,7 @@ En este repositorio (`maurocheesemonger-cmd/hybridSVP`) toda esa información qu
 
 ## 7. Próximos pasos
 
-1. **Web informativa (nuevo):** página estática (`index.html` + `styles.css` en la raíz del repositorio) que presenta el evento con la información decidida y marca como provisional lo que está por validar. Las inscripciones aparecen como «próximamente»; no hay formularios ni pagos.
+1. **Web informativa (nuevo):** página estática (`index.html` en la raíz del repositorio) que presenta el evento con la información decidida y marca como provisional lo que está por validar. Las inscripciones aparecen como «próximamente»; no hay formularios ni pagos.
 2. **Publicación en GitHub Pages:** activar Pages en el repositorio (ver `README.md`).
 3. **Recibir el antiguo proyecto de triatlón** y analizarlo como referencia.
 4. **Recibir el inventario en Excel** y estudiar estaciones, duplicados, compras, alquileres y especie.
