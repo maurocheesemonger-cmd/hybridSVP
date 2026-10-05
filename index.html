@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HybridSVP · Reto deportivo y solidario</title>
+  <meta name="description" content="HybridSVP: evento deportivo, familiar, inclusivo y solidario del Colegio San Vicente de Paúl de Alcoy. Carrera y estaciones físicas adaptadas para todas las edades.">
+  <meta name="theme-color" content="#0d1a3a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1a3a'/%3E%3Cpath d='M14 44 L26 20 L34 36 L40 26 L50 44' fill='none' stroke='%23ff5b35' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="HybridSVP, inicio">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14"/><path d="M14 44 L26 20 L34 36 L40 26 L50 44"/></svg>
+        <span>Hybrid<b>SVP</b></span>
+      </a>
+      <button class="navtoggle" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav id="nav" class="nav">
+        <a href="#evento">El evento</a>
+        <a href="#formato">Formato</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#jornada">Jornada</a>
+        <a href="#causa">Causa</a>
+        <a href="#colabora">Colabora</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="eyebrow">Colegio San Vicente de Paúl · Alcoy · 1.ª edición</p>
+          <h1>Corre. Supera cada estación. <span>Ayuda.</span></h1>
+          <p class="hero__lead">HybridSVP es un reto deportivo, familiar, inclusivo y solidario que combina tramos de carrera con estaciones físicas adaptadas a cada edad. Desde Infantil hasta adultos, cada participación suma para una causa.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#inscripciones">Inscripciones</a>
+            <a class="btn btn--ghost" href="#formato">Cómo funciona</a>
+          </div>
+        </div>
+        <aside class="datecard" aria-label="Datos clave">
+          <p class="datecard__tag">Fecha provisional</p>
+          <p class="datecard__day">25</p>
+          <p class="datecard__month">septiembre 2027 · sábado</p>
+          <ul class="datecard__facts">
+            <li><b>9:00–17:00</b> jornada completa</li>
+            <li><b>150–200</b> participantes</li>
+            <li><b>Evento 0,0</b> sin alcohol</li>
+          </ul>
+          <p class="datecard__note">Fecha alternativa: 2 de octubre de 2027. Pendiente de confirmación oficial.</p>
+        </aside>
+      </div>
+      <div class="stripe" aria-hidden="true"></div>
+    </section>
+
+    <!-- EVENTO -->
+    <section id="evento" class="section">
+      <div class="wrap">
+        <p class="kicker">El evento</p>
+        <h2>Un formato propio, pensado para toda la comunidad</h2>
+        <p class="lead">No es una carrera más ni un triatlón escolar. HybridSVP crea su propio formato híbrido: desplazarse, superar una estación, volver a moverse… hasta llegar juntos a la meta.</p>
+        <div class="cards cards--4">
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">❤</span>
+            <h3>Solidario</h3>
+            <p>La finalidad principal es recaudar fondos para una causa. El deporte es el medio para movilizar a la comunidad.</p>
+          </article>
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">👨‍👩‍👧</span>
+            <h3>Familiar</h3>
+            <p>Alumnado, familias, profesorado y participantes externos comparten una misma jornada de convivencia.</p>
+          </article>
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">♿</span>
+            <h3>Inclusivo desde el diseño</h3>
+            <p>Cada estación tiene adaptaciones equivalentes: distancia, repeticiones, peso, dificultad o apoyos. No hay una categoría «aparte».</p>
+          </article>
+          <article class="card">
+            <span class="card__icon" aria-hidden="true">⏱</span>
+            <h3>Participa o compite</h3>
+            <p>Modelo participativo + competitivo. Nadie está obligado a competir: puedes ir a por el podio o a por tu reto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATO -->
+    <section id="formato" class="section section--alt">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Formato</p>
+          <h2>Carrera + estaciones</h2>
+          <ol class="steps">
+            <li><b>Preséntate</b> a tu hora asignada en la zona de salida.</li>
+            <li><b>Sales en tu oleada</b>: grupos pequeños y escalonados para evitar colas.</li>
+            <li><b>Alternas</b> tramos de desplazamiento y estaciones físicas.</li>
+            <li><b>Tu versión de cada estación</b> ya está preparada: mismas estaciones, distinta exigencia según edad y nivel.</li>
+            <li><b>Cruzas la meta</b> y tu llegada queda registrada.</li>
+          </ol>
+          <ul class="chips">
+            <li>30–45 min máx. jóvenes y adultos</li>
+            <li>Recorridos más cortos para peques</li>
+            <li>Estaciones fijas todo el día</li>
+            <li>Control de salida y llegada para todos</li>
+          </ul>
+        </div>
+        <figure class="circuit">
+          <svg viewBox="0 0 400 300" role="img" aria-labelledby="circuit-title">
+            <title id="circuit-title">Esquema ilustrativo de un circuito con salida, tramos de carrera y estaciones</title>
+            <path class="circuit__track" d="M60 230 C 20 150, 70 60, 160 60 L 250 60 C 340 60, 380 140, 340 200 C 310 245, 250 250, 200 240 L 110 240 Z"/>
+            <g class="circuit__station"><circle cx="160" cy="60" r="16"/><text x="160" y="65">1</text></g>
+            <g class="circuit__station"><circle cx="300" cy="78" r="16"/><text x="300" y="83">2</text></g>
+            <g class="circuit__station"><circle cx="352" cy="170" r="16"/><text x="352" y="175">3</text></g>
+            <g class="circuit__station"><circle cx="265" cy="244" r="16"/><text x="265" y="249">4</text></g>
+            <g class="circuit__start"><rect x="88" y="222" width="44" height="34" rx="6"/><text x="110" y="244">META</text></g>
+            <g class="circuit__start"><rect x="20" y="150" width="48" height="34" rx="6"/><text x="44" y="172">SALIDA</text></g>
+          </svg>
+          <figcaption>Esquema ilustrativo. El circuito y las estaciones definitivas están en diseño dentro de las instalaciones del colegio.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades" class="section">
+      <div class="wrap">
+        <p class="kicker">Modalidades</p>
+        <h2>1 · 2 · 4: solo, en pareja o en equipo</h2>
+        <p class="lead">La estructura base es sencilla: <b>1</b> = individual, <b>2</b> = pareja, <b>4</b> = equipo. Los equipos de cuatro pueden hacer relevos o dividirse en dos parejas en algunas pruebas.</p>
+        <div class="cards cards--4 tiers">
+          <article class="card tier">
+            <h3>Infantil</h3>
+            <p class="tier__tag tier__tag--soft">No competitiva</p>
+            <ul><li>Niño/a + adulto</li></ul>
+            <p>Recorrido corto, divertido, cooperativo y adaptado.</p>
+          </article>
+          <article class="card tier">
+            <h3>Primaria</h3>
+            <p class="tier__tag">Por edades</p>
+            <ul><li>Individual</li><li>Parejas</li><li>Equipos</li><li>Niño/a + adulto</li></ul>
+          </article>
+          <article class="card tier">
+            <h3>Secundaria</h3>
+            <p class="tier__tag">Por edades</p>
+            <ul><li>Individual</li><li>Parejas</li><li>Equipos</li><li>Joven + adulto</li></ul>
+          </article>
+          <article class="card tier">
+            <h3>Adultos</h3>
+            <p class="tier__tag">Por edades</p>
+            <ul><li>Individual</li><li>Parejas</li><li>Equipos</li></ul>
+          </article>
+        </div>
+        <div class="note">
+          <p><b>Competición:</b> las modalidades competitivas tendrán cronometraje y podio (1.º, 2.º y 3.º) en individual, parejas y equipos, con categorías masculina, femenina y mixta cuando haya inscritos suficientes. Las modalidades participativas reciben reconocimiento de finalización. Los cortes de edad exactos se publicarán con el reglamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JORNADA -->
+    <section id="jornada" class="section section--dark">
+      <div class="wrap">
+        <p class="kicker">La jornada</p>
+        <h2>Deporte por la mañana, convivencia después</h2>
+        <ol class="timeline">
+          <li><span class="timeline__time">9:00</span><div><h3>Apertura y salidas por oleadas</h3><p>Cada participante, pareja o equipo tiene hora de presentación y hora de salida asignadas.</p></div></li>
+          <li><span class="timeline__time">13:30–14:00</span><div><h3>Fin de la parte deportiva</h3><p>Llegan las últimas oleadas.</p></div></li>
+          <li><span class="timeline__time">Después</span><div><h3>Podios, reconocimientos y acto solidario</h3><p>Celebramos a quienes han competido, a quienes han completado su reto y a la causa.</p></div></li>
+          <li><span class="timeline__time">Comida</span><div><h3>Comida popular</h3><p>Convivencia con ticket independiente, abierta también a familias, acompañantes y voluntariado.</p></div></li>
+          <li><span class="timeline__time">17:00</span><div><h3>Cierre aproximado</h3><p>Horarios provisionales.</p></div></li>
+        </ol>
+        <p class="badge00">🥤 <b>Evento 0,0</b>: agua, refrescos, isotónicas, café y cerveza 0,0. No se vende alcohol.</p>
+      </div>
+    </section>
+
+    <!-- CAUSA -->
+    <section id="causa" class="section">
+      <div class="wrap split split--center">
+        <div>
+          <p class="kicker">Causa solidaria</p>
+          <h2>Cada reto ayuda</h2>
+          <p class="lead">La recaudación de la primera edición está prevista para <b>Capitán Pulmón</b> (beneficiario pendiente de confirmación oficial).</p>
+          <p>Nos comprometemos a la transparencia: al finalizar publicaremos los <b>ingresos</b>, los <b>gastos necesarios</b> y la <b>cantidad final</b> destinada a la causa.</p>
+        </div>
+        <div class="transparency" aria-label="Compromiso de transparencia">
+          <div><span>Ingresos</span><b>+</b></div>
+          <div><span>Gastos necesarios</span><b>−</b></div>
+          <div class="transparency__total"><span>Destinado a la causa</span><b>=</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSCRIPCIONES -->
+    <section id="inscripciones" class="section section--alt">
+      <div class="wrap">
+        <p class="kicker">Inscripciones</p>
+        <h2>Próximamente</h2>
+        <p class="lead">Las inscripciones todavía no están abiertas. Anunciaremos la apertura, los precios y el procedimiento en esta página.</p>
+        <div class="cards cards--3">
+          <article class="card">
+            <h3>Solo anticipadas</h3>
+            <p>Se cierran aproximadamente <b>un mes antes</b> del evento. No habrá inscripciones deportivas el mismo día. El pago será anticipado y online.</p>
+          </article>
+          <article class="card">
+            <h3>Recogida previa</h3>
+            <p>La semana anterior podrás recoger en el colegio tu dorsal, bolsa del corredor, tickets de comida e información. El día del evento habrá un único punto de acreditación e incidencias.</p>
+          </article>
+          <article class="card">
+            <h3>Menores</h3>
+            <p>Cada menor tendrá asociado un adulto responsable y un teléfono de emergencia. Las autorizaciones de participación y de imagen se recogerán por separado en la inscripción.</p>
+          </article>
+        </div>
+        <details class="policy">
+          <summary>Condiciones de cancelación</summary>
+          <ul>
+            <li>Si no puedes asistir por motivos personales, la inscripción no se devuelve.</li>
+            <li>Si el evento se aplaza, la inscripción se traslada a la nueva fecha.</li>
+            <li>Si la organización cancela definitivamente HybridSVP, se reembolsa la inscripción.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- COLABORA -->
+    <section id="colabora" class="section">
+      <div class="wrap">
+        <p class="kicker">Colabora</p>
+        <h2>Formas de sumar</h2>
+        <div class="cards cards--3">
+          <article class="card card--accent">
+            <h3>Fila 0 / Dorsal 0</h3>
+            <p>Colabora económicamente aunque no participes, no asistas o no compres comida. Toda ayuda cuenta.</p>
+          </article>
+          <article class="card">
+            <h3>Empresas patrocinadoras</h3>
+            <p>Aporta dinero, productos o servicios. La visibilidad es proporcional a la aportación: camiseta, bolsa, dorsales, photocall, cartelería, salida/meta y estaciones.</p>
+            <ul class="levels">
+              <li><b>Principales</b> · presencia muy destacada</li>
+              <li><b>Oficiales</b> · presencia media</li>
+              <li><b>Colaboradores</b> · presencia secundaria</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Voluntariado</h3>
+            <p>Profesorado y familias del centro hacen posible la jornada. Cada puesto tendrá funciones claras y sencillas.</p>
+          </article>
+        </div>
+        <div class="sponsors" aria-label="Patrocinadores">
+          <p>Espacio reservado para patrocinadores y colaboradores de la primera edición.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGURIDAD -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <p class="kicker">Seguridad</p>
+        <h2>La seguridad va antes que la celebración</h2>
+        <ul class="checks">
+          <li>Desfibrilador (DEA) en el centro y servicio sanitario durante el evento.</li>
+          <li>Circuito compatible con el Plan de Emergencia del colegio: vías de evacuación, accesos y puntos de encuentro libres.</li>
+          <li>Accesos controlados por las dos entradas del colegio.</li>
+          <li>Ante mal tiempo: adaptación del circuito, uso del pabellón, aplazamiento o, si hiciera falta, cancelación.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap wrap--narrow">
+        <p class="kicker">Preguntas frecuentes</p>
+        <h2>FAQ</h2>
+        <details><summary>¿Tengo que ser deportista para participar?</summary><p>No. Puedes elegir una modalidad participativa y cada estación tiene versiones adaptadas a edad y nivel. Solo compite quien quiere.</p></details>
+        <details><summary>¿Pueden participar personas que no son del colegio?</summary><p>Sí, HybridSVP está abierto también a participantes externos.</p></details>
+        <details><summary>¿Es como HYROX o un triatlón?</summary><p>No. Está inspirado en el entrenamiento híbrido, pero es un formato propio, adaptado al ámbito educativo, familiar y solidario. No incluye necesariamente natación ni pruebas de alta exigencia.</p></details>
+        <details><summary>¿Cuánto dura?</summary><p>Para jóvenes y adultos, unos 30–45 minutos como máximo. Los recorridos de los más pequeños son más cortos.</p></details>
+        <details><summary>¿Qué pasa si llego tarde a mi oleada?</summary><p>Acude al punto de incidencias: te recolocaremos en otra salida si hay capacidad. En competición se aplicarán normas para que nadie obtenga ventaja.</p></details>
+        <details><summary>¿Puedo ir solo a la comida?</summary><p>Sí. La comida tiene ticket independiente y pueden comprarlo familiares, acompañantes, voluntarios y otras personas.</p></details>
+        <details><summary>¿Dónde se celebra?</summary><p>En las instalaciones del Colegio San Vicente de Paúl de Alcoy: pistas deportivas, pabellón y otros espacios del centro.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>
+        <p class="brand brand--footer"><span>Hybrid<b>SVP</b></span></p>
+        <p>Organiza: Colegio San Vicente de Paúl de Alcoy.</p>
+      </div>
+      <p class="footer__small">Web informativa en preparación. Fechas, horarios, beneficiario y condiciones son provisionales hasta su confirmación oficial.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.navtoggle');
+      var nav = document.getElementById('nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); }
+      });
+    })();
+  </script>
+</body>
+</html>
