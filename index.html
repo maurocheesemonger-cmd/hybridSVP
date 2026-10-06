@@ -256,6 +256,21 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
 .footer p { margin: 0 0 4px; }
 .footer__small { font-size: .85rem; max-width: 46ch; }
 
+/* Route map */
+.routemap { margin: 0; display: grid; grid-template-columns: 1.7fr 1fr; gap: 32px; align-items: start; }
+.routemap svg { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); background: #eef1f5; }
+.routemap__stations { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; }
+.routemap__stations li { display: flex; align-items: center; gap: 14px; font-family: var(--display); font-weight: 700; font-size: 1.15rem; }
+.routemap__stations span { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #f2b632; color: #14375d; font-weight: 900; flex: none; }
+.routemap__lines { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 10px; color: var(--muted); }
+.routemap__lines li { display: flex; align-items: center; gap: 12px; }
+.ln { display: inline-block; width: 40px; height: 6px; border-radius: 3px; flex: none; }
+.ln--t { background: #0f9b8e; }
+.ln--y { background: #e39a00; }
+.ln--d { background: repeating-linear-gradient(90deg, #e39a00 0 10px, transparent 10px 18px); }
+.routemap__legend p { font-size: .9rem; color: var(--muted); margin: 0; padding-top: 16px; border-top: 1px solid var(--line); }
+@media (max-width: 960px) { .routemap { grid-template-columns: 1fr; } }
+
 /* Responsive */
 @media (max-width: 960px) {
   .hero__grid, .split { grid-template-columns: 1fr; gap: 40px; }
@@ -299,6 +314,7 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
       <nav id="nav" class="nav">
         <a href="#evento">El evento</a>
         <a href="#formato">Formato</a>
+        <a href="#recorrido">Recorrido</a>
         <a href="#modalidades">Modalidades</a>
         <a href="#jornada">Jornada</a>
         <a href="#causa">Causa</a>
@@ -415,6 +431,111 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
             <figcaption>Esquema ilustrativo. El circuito y las estaciones definitivas se están diseñando dentro de las instalaciones del colegio.</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <!-- RECORRIDO -->
+    <section id="recorrido" class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker">Recorrido</p>
+          <h2>El circuito en el colegio</h2>
+          <p class="lead">Explanada, patio y dos pistas, todo dentro del recinto. Se sale y se llega por el mismo punto.</p>
+        </div>
+        <figure class="routemap">
+          <svg viewBox="50 120 1000 1080" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Mapa del recorrido de HybridSVP</title>
+            <desc id="map-desc">Desde la salida, el recorrido pasa por la explanada (estación 1), entra por el acceso izquierdo al patio (estación 2), sube por la cuesta exterior hasta la primera pista (estación 3) y la segunda pista (estación 4), conectadas por escaleras que se recorren andando, y regresa por la cuesta exterior hasta la meta.</desc>
+            <defs>
+              <marker id="arr-t" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#0f9b8e"/></marker>
+              <marker id="arr-y" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#e39a00"/></marker>
+              <pattern id="hill" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#dbe7d3"/><circle cx="7" cy="8" r="4" fill="#c9dbbf"/><circle cx="21" cy="20" r="5" fill="#c9dbbf"/></pattern>
+            </defs>
+            <!-- terreno -->
+            <rect x="50" y="120" width="1000" height="1080" fill="#eef1f5"/>
+            <path d="M50 120 H700 L520 200 L420 330 L300 470 L180 560 L50 690 Z" fill="url(#hill)"/>
+            <path d="M880 120 H1050 V470 L940 420 Z" fill="url(#hill)"/>
+            <!-- calle -->
+            <path d="M1050 470 L1050 640 L800 1200 L690 1200 Z" fill="#d5dbe4"/>
+            <path d="M1050 555 L745 1200" stroke="#fff" stroke-width="4" stroke-dasharray="22 18"/>
+            <!-- explanada / aparcamiento -->
+            <path d="M265 735 L420 760 L520 960 L300 965 Z" fill="#e2e7ee"/>
+            <!-- edificios -->
+            <g fill="#c3cddb" stroke="#9aa9bd" stroke-width="3">
+              <path d="M205 578 L735 452 L752 518 L238 640 Z"/>
+              <path d="M230 600 L292 590 L358 742 L320 756 Z"/>
+              <path d="M742 458 L888 500 L818 782 L708 772 L776 560 Z"/>
+              <path d="M458 762 L722 770 L736 822 L522 880 L470 848 Z" fill="#e7c9c9" stroke="#c99a9a"/>
+            </g>
+            <!-- pabellón -->
+            <rect x="50" y="975" width="305" height="225" fill="#b8c4d4" stroke="#9aa9bd" stroke-width="3"/>
+            <rect x="355" y="965" width="90" height="160" fill="#d9c3b0" stroke="#bfa58f" stroke-width="3"/>
+            <!-- pistas -->
+            <g fill="#dde6f1" stroke="#a9b8cc" stroke-width="3">
+              <path d="M465 250 L560 195 L765 302 L705 402 L520 392 Z"/>
+              <path d="M705 300 L792 290 L925 400 L872 452 L790 442 Z"/>
+            </g>
+
+            <!-- conexiones discontinuas -->
+            <g fill="none" stroke="#e39a00" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 12">
+              <path d="M362 718 L362 762"/>
+              <path d="M428 778 L455 752"/>
+              <path d="M635 312 L700 350 L770 382 L815 440 L895 455"/>
+            </g>
+            <!-- regreso (amarillo) -->
+            <polyline fill="none" stroke="#fff" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" points="895,455 920,505 880,560 840,605 825,690 810,775 612,915 542,1002"/>
+            <polyline fill="none" stroke="#e39a00" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" marker-mid="url(#arr-y)" points="895,455 920,505 880,560 840,605 825,690 810,775 612,915 542,1002"/>
+            <!-- avance (turquesa) -->
+            <g fill="none" stroke="#fff" stroke-width="13" stroke-linejoin="round" stroke-linecap="round">
+              <polyline points="497,975 470,905 420,830 378,772 365,700 366,655"/>
+              <polyline points="366,655 600,575 652,618 600,712 455,752 362,705 366,655"/>
+              <polyline points="425,778 470,850 548,945 620,905 830,750 858,640 880,570 945,505 955,488 900,458 830,430"/>
+              <polyline points="830,430 848,410 785,352 725,342"/>
+              <polyline points="630,305 595,262 557,225 497,250 540,378 610,342 630,305"/>
+            </g>
+            <g fill="none" stroke="#0f9b8e" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" marker-mid="url(#arr-t)">
+              <polyline points="497,975 470,905 420,830 378,772 365,700 366,655"/>
+              <polyline points="366,655 600,575 652,618 600,712 455,752 362,705 366,655"/>
+              <polyline points="425,778 470,850 548,945 620,905 830,750 858,640 880,570 945,505 955,488 900,458 830,430"/>
+              <polyline points="830,430 848,410 785,352 725,342"/>
+              <polyline points="630,305 595,262 557,225 497,250 540,378 610,342 630,305"/>
+            </g>
+
+            <!-- estaciones -->
+            <g font-family="Montserrat, system-ui, sans-serif" font-weight="900" font-size="30" text-anchor="middle">
+              <g><circle cx="415" cy="835" r="28" fill="#f2b632" stroke="#fff" stroke-width="5"/><text x="415" y="846" fill="#14375d">1</text></g>
+              <g><circle cx="527" cy="641" r="28" fill="#f2b632" stroke="#fff" stroke-width="5"/><text x="527" y="652" fill="#14375d">2</text></g>
+              <g><circle cx="565" cy="290" r="28" fill="#f2b632" stroke="#fff" stroke-width="5"/><text x="565" y="301" fill="#14375d">3</text></g>
+              <g><circle cx="793" cy="388" r="28" fill="#f2b632" stroke="#fff" stroke-width="5"/><text x="793" y="399" fill="#14375d">4</text></g>
+            </g>
+            <!-- salida / meta -->
+            <g><circle cx="520" cy="988" r="30" fill="#14375d" stroke="#fff" stroke-width="5"/><path d="M509 1003 V972 M509 974 H532 L527 981 L532 988 H509" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></g>
+
+            <!-- etiquetas -->
+            <g font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" letter-spacing=".5">
+              <g><rect x="438" y="1028" width="210" height="40" rx="6" fill="#14375d"/><text x="543" y="1055" fill="#fff" text-anchor="middle">SALIDA / META</text></g>
+              <g><rect x="118" y="616" width="244" height="40" rx="6" fill="#14375d"/><text x="240" y="643" fill="#fff" text-anchor="middle">ACCESO IZQUIERDO</text></g>
+              <g><rect x="486" y="402" width="290" height="40" rx="6" fill="#14375d"/><text x="631" y="429" fill="#fff" text-anchor="middle">ESCALERAS · ANDANDO</text></g>
+              <g><rect x="640" y="828" width="240" height="40" rx="6" fill="#14375d"/><text x="760" y="855" fill="#fff" text-anchor="middle">CUESTA EXTERIOR</text></g>
+              <g><rect x="452" y="780" width="316" height="40" rx="6" fill="#b03a3a"/><text x="610" y="807" fill="#fff" text-anchor="middle">EDIFICIO · SIN ENTRADA</text></g>
+              <g><rect x="125" y="1070" width="150" height="40" rx="6" fill="#fff" opacity=".85"/><text x="200" y="1097" fill="#14375d" text-anchor="middle">PABELLÓN</text></g>
+            </g>
+          </svg>
+          <figcaption class="routemap__legend">
+            <ol class="routemap__stations">
+              <li><span>1</span>Explanada</li>
+              <li><span>2</span>Patio</li>
+              <li><span>3</span>Primera pista</li>
+              <li><span>4</span>Segunda pista</li>
+            </ol>
+            <ul class="routemap__lines">
+              <li><i class="ln ln--t"></i>Avance</li>
+              <li><i class="ln ln--y"></i>Regreso / enlaces</li>
+              <li><i class="ln ln--d"></i>Conexión indicada, posición exacta por comprobar</li>
+            </ul>
+            <p>Propuesta orientativa, sin escala. Las escaleras se recorren andando y no se entra en los edificios.</p>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
