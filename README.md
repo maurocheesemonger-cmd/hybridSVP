@@ -15,6 +15,7 @@ HybridSVP es un formato propio: no copia HYROX ni es un triatlón. Es un proyect
 |---|---|
 | [`docs/INFORMACION.md`](docs/INFORMACION.md) | **Información**: recopilación completa del proyecto (planteamiento, análisis inicial, decisiones con estados DECIDIDO / PENDIENTE / POR VALIDAR, tensiones y próximos pasos). |
 | `index.html` | Web informativa estática del evento (estilos e iconos incluidos en el propio archivo). No incluye formularios, pagos ni datos personales. |
+| `assets/` | Logo oficial de HybridSVP (original y versiones para la web, favicon e icono de móvil). |
 | `.nojekyll` | Indica a GitHub Pages que sirva los archivos tal cual. |
 
 ## Publicar la web en GitHub Pages

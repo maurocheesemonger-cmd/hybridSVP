@@ -304,7 +304,8 @@ Agrupadas en: bloqueantes (fecha, promotor, instalaciones, aforo, presupuesto, c
 
 ### 3.17. Identidad visual
 - [DECIDIDO] Identidad propia con presencia del **logo oficial del Colegio San Vicente de Paúl de Alcoy** [POR VALIDAR: uso institucional].
-- [PENDIENTE] Logo específico HybridSVP, camiseta, medalla, bolsa, dorsales y señalética (se diseñarán cuando el proyecto esté más definido).
+- [DECIDIDO] Logo específico HybridSVP aportado el 6/10/2026 (figura en movimiento, mancuerna y ondas, texto «HYBRIDSVP · ALCOY»; colores azul marino #14375D y azul #5889CB). Archivo en `assets/`.
+- [PENDIENTE] Camiseta, medalla, bolsa, dorsales y señalética (se diseñarán cuando el proyecto esté más definido).
 - [DECIDIDO] Medalla/reconocimiento finisher previsto; [POR VALIDAR] camiseta oficial según presupuesto y patrocinio.
 
 ### 3.18. Comunicación

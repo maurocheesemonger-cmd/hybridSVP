@@ -5,18 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HybridSVP · Reto deportivo y solidario</title>
   <meta name="description" content="HybridSVP: evento deportivo, familiar, inclusivo y solidario del Colegio San Vicente de Paúl de Alcoy. Carrera y estaciones físicas adaptadas para todas las edades.">
-  <meta name="theme-color" content="#0b2545">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b2545'/%3E%3Cpath d='M14 42 L25 22 L33 36 L40 27 L50 42' fill='none' stroke='%23f2a900' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#14375d">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:image" content="assets/logo-hybridsvp.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
 :root {
-  --navy: #0b2545;
-  --navy-2: #13315c;
-  --navy-3: #1d4278;
-  --gold: #f2a900;
-  --gold-ink: #a86f00;
+  --navy: #14375d;
+  --navy-2: #1c4677;
+  --navy-3: #275a93;
+  --accent: #5889cb;
+  --accent-strong: #3a6db3;
+  --accent-ink: #3a6db3;
+  --sky: #a9c6ee;
   --bg: #ffffff;
   --tint: #f4f6fa;
   --ink: #0f1b2d;
@@ -36,7 +40,7 @@
     --muted: #a8b3c7;
     --line: #213a63;
     --card: #0f2546;
-    --gold-ink: #f2b632;
+    --accent-ink: #8fb3e3;
   }
 }
 
@@ -49,7 +53,7 @@ h1 { font-size: clamp(2.4rem, 5.6vw, 4rem); font-weight: 900; }
 h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; }
 h3 { font-size: 1.15rem; font-weight: 700; }
 p { margin: 0 0 1em; }
-em { font-style: normal; color: var(--gold); }
+em { font-style: normal; color: var(--sky); }
 
 .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
 .wrap--narrow { width: min(780px, 100% - 32px); }
@@ -61,11 +65,9 @@ em { font-style: normal; color: var(--gold); }
 .topbar { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
 .topbar__inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 16px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand__mark { width: 40px; height: 40px; flex: none; }
-.brand__mark rect { fill: var(--navy); }
-.brand__mark path { fill: none; stroke: var(--gold); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.brand__logo { width: 52px; height: 52px; border-radius: 50%; flex: none; background: #fff; }
 .brand__text { font-family: var(--display); font-weight: 900; font-size: 1.35rem; line-height: 1; letter-spacing: -.01em; }
-.brand__text b { color: var(--gold-ink); }
+.brand__text b { color: var(--accent-ink); }
 .brand__text small { display: block; font: 500 .7rem/1.4 var(--body); color: var(--muted); letter-spacing: .02em; margin-top: 3px; }
 .nav { display: flex; align-items: center; gap: 24px; }
 .nav a { text-decoration: none; font-weight: 500; font-size: .92rem; color: var(--muted); }
@@ -86,8 +88,8 @@ em { font-style: normal; color: var(--gold); }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: background .15s ease, transform .15s ease; }
 .btn svg { width: 18px; height: 18px; stroke-width: 2.2; }
 .btn:hover { transform: translateY(-1px); }
-.btn--gold { background: var(--gold); color: var(--navy); }
-.btn--gold:hover { background: #ffbb1f; }
+.btn--gold { background: var(--accent-strong); color: #fff; }
+.btn--gold:hover { background: var(--accent); }
 .btn--line { border: 1.5px solid rgba(255,255,255,.45); color: #fff; }
 .btn--line:hover { border-color: #fff; }
 
@@ -100,12 +102,14 @@ em { font-style: normal; color: var(--gold); }
     linear-gradient(160deg, var(--navy-2), var(--navy) 60%);
 }
 .hero__grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 56px; align-items: center; }
-.eyebrow { display: inline-block; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 600; color: var(--gold); border-left: 3px solid var(--gold); padding-left: 12px; }
+.eyebrow { display: inline-block; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 600; color: var(--sky); border-left: 3px solid var(--accent); padding-left: 12px; }
 .hero__lead { font-size: 1.15rem; color: #cfd8e8; max-width: 54ch; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
 .countdown { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 14px; padding: 30px; backdrop-filter: blur(4px); }
-.countdown__label { text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 600; color: var(--gold); margin-bottom: 4px; }
+.countdown__logo { display: block; width: 132px; height: 132px; border-radius: 50%; background: #fff; margin: -96px auto 18px; box-shadow: 0 16px 40px -12px rgba(0,0,0,.55); border: 4px solid #fff; }
+.countdown { margin-top: 64px; }
+.countdown__label { text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 600; color: var(--sky); margin-bottom: 4px; }
 .countdown__date { font-family: var(--display); font-weight: 700; font-size: 1.2rem; margin-bottom: 20px; }
 .countdown__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
 .countdown__grid div { background: #fff; color: var(--navy); border-radius: 8px; padding: 16px 8px; text-align: center; }
@@ -114,10 +118,10 @@ em { font-style: normal; color: var(--gold); }
 .countdown__note { font-size: .82rem; color: #aebbd2; margin: 0; }
 
 /* Values band */
-.values { background: var(--gold); color: var(--navy); }
+.values { background: var(--accent-strong); color: #fff; }
 .values__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 16px 0; font-family: var(--display); font-weight: 800; font-size: .9rem; text-transform: uppercase; letter-spacing: .12em; }
 .values__inner span { display: inline-flex; align-items: center; gap: 24px; }
-.values__inner span + span::before { content: ""; width: 6px; height: 6px; background: var(--navy); transform: rotate(45deg); margin-right: 0; }
+.values__inner span + span::before { content: ""; width: 6px; height: 6px; background: var(--sky); transform: rotate(45deg); margin-right: 0; }
 
 /* Stats */
 .stats { border-bottom: 1px solid var(--line); }
@@ -125,7 +129,7 @@ em { font-style: normal; color: var(--gold); }
 .stats__grid div { padding: 40px 24px; border-left: 1px solid var(--line); }
 .stats__grid div:first-child { border-left: 0; padding-left: 0; }
 .stats__grid b { display: block; font-family: var(--display); font-weight: 900; font-size: 2.4rem; line-height: 1.1; color: var(--navy); }
-@media (prefers-color-scheme: dark) { .stats__grid b { color: var(--gold); } }
+@media (prefers-color-scheme: dark) { .stats__grid b { color: var(--sky); } }
 .stats__grid span { color: var(--muted); font-size: .92rem; }
 
 /* Sections */
@@ -134,17 +138,17 @@ em { font-style: normal; color: var(--gold); }
 .section--navy { background: var(--navy); color: #fff; }
 .section--navy .lead { color: #cfd8e8; }
 .head { max-width: 760px; margin-bottom: 44px; }
-.kicker { display: inline-flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 700; color: var(--gold-ink); margin-bottom: .8em; }
-.kicker::before { content: ""; width: 28px; height: 3px; background: var(--gold); }
-.section--navy .kicker { color: var(--gold); }
+.kicker { display: inline-flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 700; color: var(--accent-ink); margin-bottom: .8em; }
+.kicker::before { content: ""; width: 28px; height: 3px; background: var(--accent); }
+.section--navy .kicker { color: var(--sky); }
 .lead { font-size: 1.12rem; color: var(--muted); }
 
 /* Pillars */
 .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 3px solid var(--navy); }
-@media (prefers-color-scheme: dark) { .pillars { border-top-color: var(--gold); } }
+@media (prefers-color-scheme: dark) { .pillars { border-top-color: var(--accent); } }
 .pillar { padding: 28px 24px 8px 0; }
 .pillar + .pillar { padding-left: 24px; border-left: 1px solid var(--line); }
-.pillar .ico { width: 34px; height: 34px; color: var(--gold-ink); margin-bottom: 14px; }
+.pillar .ico { width: 34px; height: 34px; color: var(--accent-ink); margin-bottom: 14px; }
 .pillar p { color: var(--muted); margin: 0; }
 
 /* Steps + circuit */
@@ -153,7 +157,7 @@ em { font-style: normal; color: var(--gold); }
 .steps { list-style: none; padding: 0; margin: 0; }
 .steps li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 20px 0; border-bottom: 1px solid var(--line); }
 .steps li:first-child { padding-top: 0; }
-.steps span { font-family: var(--display); font-weight: 900; font-size: 2rem; line-height: 1; color: var(--gold-ink); }
+.steps span { font-family: var(--display); font-weight: 900; font-size: 2rem; line-height: 1; color: var(--accent-ink); }
 .steps h3 { margin-bottom: .25em; }
 .steps p { margin: 0; color: var(--muted); }
 
@@ -161,7 +165,7 @@ em { font-style: normal; color: var(--gold); }
 .circuit figcaption { font-size: .85rem; color: var(--muted); margin-top: 10px; }
 .circuit__track { fill: none; stroke: var(--navy-3); stroke-width: 8; stroke-dasharray: 14 10; stroke-linecap: round; }
 @media (prefers-color-scheme: dark) { .circuit__track { stroke: #6f8fc4; } }
-.circuit__station circle { fill: var(--gold); stroke: var(--card); stroke-width: 4; }
+.circuit__station circle { fill: var(--accent); stroke: var(--card); stroke-width: 4; }
 .circuit__station text { fill: var(--navy); font: 900 15px var(--display); text-anchor: middle; }
 .circuit__goal rect { fill: var(--navy); }
 @media (prefers-color-scheme: dark) { .circuit__goal rect { fill: #fff; } .circuit__goal text { fill: var(--navy) !important; } }
@@ -170,7 +174,7 @@ em { font-style: normal; color: var(--gold); }
 /* Tiers */
 .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .tier { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--navy); border-radius: var(--radius); padding: 24px; }
-@media (prefers-color-scheme: dark) { .tier { border-top-color: var(--gold); } }
+@media (prefers-color-scheme: dark) { .tier { border-top-color: var(--accent); } }
 .tier header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 14px; }
 .tier h3 { font-size: 1.35rem; margin: 0; }
 .tier ul { list-style: none; padding: 0; margin: 0 0 10px; }
@@ -178,12 +182,12 @@ em { font-style: normal; color: var(--gold); }
 .tier li:last-child { border-bottom: 0; }
 .tier p { color: var(--muted); margin: 0; font-size: .95rem; }
 .tag { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; background: var(--tint); color: var(--muted); padding: 4px 8px; border-radius: 4px; white-space: nowrap; }
-.tag--gold { background: var(--gold); color: var(--navy); }
+.tag--gold { background: var(--accent-strong); color: #fff; }
 
 .callout { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 28px; background: var(--navy); color: #fff; border-radius: var(--radius); overflow: hidden; }
 .callout div { padding: 28px; }
 .callout div + div { border-left: 1px solid rgba(255,255,255,.15); }
-.callout h3 { color: var(--gold); }
+.callout h3 { color: var(--sky); }
 .callout p { margin: 0; color: #cfd8e8; }
 
 /* Quote */
@@ -194,7 +198,7 @@ em { font-style: normal; color: var(--gold); }
 .timeline { list-style: none; padding: 0; margin: 0 0 32px; }
 .timeline li { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
 .timeline li:last-child { border-bottom: 1px solid var(--line); }
-.timeline span { font-family: var(--display); font-weight: 800; font-size: 1.35rem; color: var(--gold-ink); }
+.timeline span { font-family: var(--display); font-weight: 800; font-size: 1.35rem; color: var(--accent-ink); }
 .timeline h3 { margin-bottom: .2em; }
 .timeline p { color: var(--muted); margin: 0; }
 .pill { display: inline-block; background: var(--tint); border: 1px solid var(--line); padding: 12px 18px; border-radius: 6px; margin: 0; }
@@ -202,8 +206,8 @@ em { font-style: normal; color: var(--gold); }
 /* Ledger */
 .ledger { display: grid; gap: 10px; }
 .ledger div { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 8px; padding: 18px 22px; font-weight: 600; }
-.ledger b { font-family: var(--display); font-size: 1.8rem; color: var(--gold); }
-.ledger__total { background: var(--gold) !important; color: var(--navy); border-color: var(--gold) !important; }
+.ledger b { font-family: var(--display); font-size: 1.8rem; color: var(--sky); }
+.ledger__total { background: var(--accent-strong) !important; color: #fff; border-color: var(--accent-strong) !important; }
 .ledger__total b { color: var(--navy); }
 
 /* Cards */
@@ -212,7 +216,7 @@ em { font-style: normal; color: var(--gold); }
 .card p:last-child { margin-bottom: 0; }
 .card p { color: var(--muted); }
 .card--navy { background: var(--navy); border-color: var(--navy); color: #fff; }
-.card--navy h3 { color: var(--gold); }
+.card--navy h3 { color: var(--sky); }
 .card--navy p { color: #cfd8e8; }
 .levels { list-style: none; padding: 0; margin: 14px 0 0; }
 .levels li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); font-size: .92rem; }
@@ -225,7 +229,7 @@ em { font-style: normal; color: var(--gold); }
 details { border-bottom: 1px solid var(--line); padding: 18px 0; }
 summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
 summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1; color: var(--gold-ink); }
+summary::after { content: "+"; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1; color: var(--accent-ink); }
 details[open] summary::after { content: "−"; }
 details p, details ul { margin: 12px 0 0; color: var(--muted); }
 .policy { margin-top: 24px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 24px; }
@@ -233,21 +237,22 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
 /* Safety */
 .checks { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .checks li { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
-.checks svg { width: 26px; height: 26px; flex: none; color: var(--gold-ink); }
+.checks svg { width: 26px; height: 26px; flex: none; color: var(--accent-ink); }
 
 /* Final CTA */
-.final { background: var(--gold); color: var(--navy); padding: 72px 0; }
+.final { background: var(--accent-strong); color: #fff; padding: 72px 0; }
 .final__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
 .final h2 { margin: 0; font-weight: 900; }
-.final em { color: var(--navy); text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px; }
-.final .btn--gold { background: var(--navy); color: #fff; }
-.final .btn--gold:hover { background: var(--navy-3); }
+.final em { color: #fff; text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px; }
+.final .btn--gold { background: #fff; color: var(--navy); }
+.final .btn--gold:hover { background: var(--sky); }
 
 /* Footer */
 .footer { background: var(--navy); color: #b9c5da; padding: 44px 0; }
 .footer__inner { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.footer__logo { width: 44px; height: 44px; border-radius: 50%; background: #fff; vertical-align: middle; margin-right: 10px; }
 .footer__brand { font-family: var(--display); font-weight: 900; font-size: 1.4rem; color: #fff; margin-bottom: 4px; }
-.footer__brand b { color: var(--gold); }
+.footer__brand b { color: var(--sky); }
 .footer p { margin: 0 0 4px; }
 .footer__small { font-size: .85rem; max-width: 46ch; }
 
@@ -278,7 +283,7 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
   .btn { transition: none; }
 }
 @media (prefers-color-scheme: dark) {
-  .nav .nav__cta, .final .btn--gold { background: var(--gold); color: var(--navy); }
+  .nav .nav__cta { background: var(--accent-strong); color: #fff; }
 }
   </style>
 </head>
@@ -287,7 +292,7 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
   <header class="topbar" id="top">
     <div class="wrap topbar__inner">
       <a class="brand" href="#top" aria-label="HybridSVP, inicio">
-        <svg class="brand__mark" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#0b2545"/><path d="M14 42 L25 22 L33 36 L40 27 L50 42" fill="none" stroke="#f2a900" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <img class="brand__logo" src="assets/logo-hybridsvp.png" width="52" height="52" alt="Logo HybridSVP">
         <span class="brand__text">Hybrid<b>SVP</b><small>Colegio San Vicente de Paúl · Alcoy</small></span>
       </a>
       <button class="navtoggle" aria-expanded="false" aria-controls="nav">Menú</button>
@@ -318,6 +323,7 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
           </div>
         </div>
         <aside class="countdown" aria-label="Cuenta atrás">
+          <img class="countdown__logo" src="assets/logo-hybridsvp.png" width="132" height="132" alt="Logo HybridSVP Alcoy">
           <p class="countdown__label">Cuenta atrás · fecha provisional</p>
           <p class="countdown__date">Sábado 25 de septiembre de 2027</p>
           <div class="countdown__grid" id="countdown">
@@ -606,7 +612,7 @@ details p, details ul { margin: 12px 0 0; color: var(--muted); }
   <footer class="footer">
     <div class="wrap footer__inner">
       <div>
-        <p class="footer__brand">Hybrid<b>SVP</b></p>
+        <p class="footer__brand"><img src="assets/logo-hybridsvp.png" width="44" height="44" alt="" class="footer__logo">Hybrid<b>SVP</b></p>
         <p>Organiza: Colegio San Vicente de Paúl de Alcoy.</p>
       </div>
       <p class="footer__small">Web informativa en preparación. Fechas, horarios, beneficiario y condiciones son provisionales hasta su confirmación oficial.</p>
